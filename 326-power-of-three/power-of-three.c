@@ -1,12 +1,7 @@
+#include <math.h>
 bool isPowerOfThree(int n) {
-    if(n==0){
-        return false;
-    }
-    while(n%3==0){
-        n/=3;
-    }
-    if(n==1){
-        return true;
-    }
+    double i=log10(n) / log10(3);
+    if((int)i==i)
+    return true;
     return false;
 }
