@@ -6,17 +6,17 @@
  * };
  */
 struct ListNode* deleteMiddle(struct ListNode* head) {
-    int c=0;
+    int count=0;
     struct ListNode* temp=head;
     if(head==NULL || head->next==NULL)
     return NULL;
     while(temp!=NULL){
         temp=temp->next;
-        c++;
+        count++;
     }
-    c=c/2;
+    count=count/2;
     temp=head;
-    for(int i=1;i<c;i++){
+    for(int i=1;i<count;i++){
         temp=temp->next;
     }
     temp->next=temp->next->next;
