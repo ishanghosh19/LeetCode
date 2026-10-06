@@ -14,7 +14,7 @@ struct ListNode* deleteMiddle(struct ListNode* head) {
         temp=temp->next;
         count++;
     }
-    count/=2;
+    count=count/2;
     temp=head;
     for(int i=1;i<count;i++){
         temp=temp->next;
